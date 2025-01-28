@@ -10,5 +10,12 @@ const lyrics = [
 
 document.getElementById('new-lyric').addEventListener('click', () => {
     const randomLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
-    document.getElementById('lyric-container').innerHTML = `<p>"${randomLyric}"</p>`;
+    const lyricContainer = document.getElementById('lyric-container');
+    
+    // Animate the lyric change
+    lyricContainer.style.transform = 'scale(0)';
+    setTimeout(() => {
+        lyricContainer.innerHTML = `<p class="lyric-text">"${randomLyric}"</p>`;
+        lyricContainer.style.transform = 'scale(1)';
+    }, 300);
 });
