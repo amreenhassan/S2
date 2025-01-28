@@ -1,25 +1,48 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    background-color: #111;
     color: #fff;
+    overflow-x: hidden;
 }
 
-header {
-    background: linear-gradient(45deg, #ff0000, #000000);
-    color: white;
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #d50000, #000000);
     text-align: center;
-    padding: 100px 0;
+    height: 100vh;
+    padding: 50px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-h1 {
-    font-size: 3em;
+.hero-title {
+    font-family: 'Sacramento', cursive;
+    font-size: 4em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-p {
+.hero-quote {
     font-size: 1.5em;
+    font-weight: 400;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-in-out 1s;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -27,22 +50,44 @@ nav ul {
     padding: 0;
     text-align: center;
     margin: 0;
+    position: fixed;
+    top: 20px;
+    width: 100%;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 30px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-section.content, .lyrics-list, .about-content {
+section.content {
+    padding: 50px;
     text-align: center;
-    margin: 50px;
+    background-color: #222;
+}
+
+.lyric-box {
+    background-color: rgba(255, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.lyric-text {
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.5;
+    animation: fadeIn 2s ease-in-out;
 }
 
 button {
@@ -50,18 +95,15 @@ button {
     color: white;
     border: none;
     padding: 15px 30px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 button:hover {
+    transform: scale(1.1);
     background-color: #d10000;
-}
-
-.lyric {
-    margin: 20px 0;
-    font-size: 1.5em;
 }
 
 footer {
@@ -70,147 +112,12 @@ footer {
     padding: 20px;
     font-size: 1em;
 }
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    color: #fff;
-}
 
-header {
-    background: linear-gradient(45deg, #ff0000, #000000);
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-}
-
-h1 {
-    font-size: 3em;
-}
-
-p {
-    font-size: 1.5em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-section.content, .lyrics-list, .about-content {
-    text-align: center;
-    margin: 50px;
-}
-
-button {
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #d10000;
-}
-
-.lyric {
-    margin: 20px 0;
-    font-size: 1.5em;
-}
-
-footer {
-    background-color: #000000;
-    text-align: center;
-    padding: 20px;
-    font-size: 1em;
-}
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    color: #fff;
-}
-
-header {
-    background: linear-gradient(45deg, #ff0000, #000000);
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-}
-
-h1 {
-    font-size: 3em;
-}
-
-p {
-    font-size: 1.5em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-section.content, .lyrics-list, .about-content {
-    text-align: center;
-    margin: 50px;
-}
-
-button {
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #d10000;
-}
-
-.lyric {
-    margin: 20px 0;
-    font-size: 1.5em;
-}
-
-footer {
-    background-color: #000000;
-    text-align: center;
-    padding: 20px;
-    font-size: 1em;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
