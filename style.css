@@ -6,13 +6,18 @@ body {
     background-color: #111;
     color: #fff;
     overflow-x: hidden;
+    height: 100%; /* Ensure body takes up full height */
+}
+
+html, body {
+    height: 100%; /* Ensure body takes up full height */
 }
 
 .hero {
     position: relative;
     background: linear-gradient(135deg, #d50000, #000000);
     text-align: center;
-    height: 100vh;
+    height: 100vh; /* Ensure hero section fills the viewport */
     padding: 50px 20px;
     color: white;
     display: flex;
@@ -39,7 +44,7 @@ body {
 
 section.content {
     padding: 50px;
-    text-align: center;
+    text-align: center; /* Ensure text is centered */
     background-color: #222;
 }
 
