@@ -1,36 +1,34 @@
 /* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+html, body {
+    height: 100%; /* Ensure both html and body take full height */
     margin: 0;
     padding: 0;
-    background-color: #111;
+    font-family: 'Roboto', sans-serif;
+    background-color: #111; /* Dark background */
     color: #fff;
-    overflow-x: hidden;
-    height: 100%; /* Ensure body takes up full height */
 }
 
-html, body {
-    height: 100%; /* Ensure body takes up full height */
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, #d50000, #000000);
-    text-align: center;
-    height: 100vh; /* Ensure hero section fills the viewport */
-    padding: 50px 20px;
-    color: white;
+    background: linear-gradient(135deg, #d50000, #000000); /* Red-Black Gradient */
+    height: 100vh; /* Full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
+    color: white;
 }
 
 .hero-title {
     font-family: 'Sacramento', cursive;
     font-size: 4em;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .overlay {
@@ -39,17 +37,18 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
 }
 
+/* Content Section */
 section.content {
     padding: 50px;
-    text-align: center; /* Ensure text is centered */
-    background-color: #222;
+    text-align: center; /* Center text */
+    background-color: #222; /* Dark background for content */
 }
 
 .lyric-box {
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: rgba(255, 0, 0, 0.3); /* Semi-transparent red */
     padding: 40px;
     border-radius: 15px;
     margin: 20px auto;
@@ -64,6 +63,7 @@ section.content {
     animation: fadeIn 2s ease-in-out;
 }
 
+/* Button Styles */
 button {
     background-color: #ff0000;
     color: white;
@@ -80,6 +80,7 @@ button:hover {
     background-color: #d10000;
 }
 
+/* Footer Styles */
 footer {
     background-color: #000000;
     text-align: center;
@@ -87,6 +88,7 @@ footer {
     font-size: 1em;
 }
 
+/* Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
